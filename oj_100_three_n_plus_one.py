@@ -1,3 +1,6 @@
+def user_input():
+    values = input().split()
+    return int(values[0]), int(values[1])
 def cycle_length(n):
     m = 1
     while n != 1:
@@ -14,3 +17,7 @@ def maximum_cycle_length(i, j):
         if m < cycle_length(n):
             m = cycle_length(n)
     return str(i) + " " + str(j) + " " + str(m)
+
+x, y = user_input()
+z = maximum_cycle_length(x, y)
+print(z)
