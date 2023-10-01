@@ -14,8 +14,3 @@ def maximum_cycle_length(i, j):
         if m < cycle_length(n):
             m = cycle_length(n)
     return str(i) + " " + str(j) + " " + str(m)
-
-
-
-z = maximum_cycle_length(1, 10)
-print(z)
