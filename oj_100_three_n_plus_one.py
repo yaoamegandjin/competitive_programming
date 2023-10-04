@@ -1,5 +1,7 @@
-def user_input():
-    values = input().split()
+import sys
+
+def user_input(line):
+    values = line.split()
     return int(values[0]), int(values[1])
 def cycle_length(n):
     m = 1
@@ -18,6 +20,8 @@ def maximum_cycle_length(i, j):
             m = cycle_length(n)
     return str(i) + " " + str(j) + " " + str(m)
 
-x, y = user_input()
-z = maximum_cycle_length(x, y)
-print(z)
+
+for line in sys.stdin:
+    x, y = user_input(line)
+    z = maximum_cycle_length(x, y)
+    print(z)
